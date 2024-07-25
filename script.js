@@ -53,3 +53,40 @@ function pauseSong(){
 playBtn.addEventListener('click', ()=> (isPlaying ? pauseSong() : playSong()));
 
 
+// update dom
+function loadSong(song){
+  title.textContent  = song.displayName;
+  artist.textContent = song.artist;
+  music.src = `music/${song.name}.mp3`;
+  image.src = `img/${song.name}.jpg`;
+}
+
+// current song
+let songIndex = 0;
+
+// prev song
+function prevSong(){
+  songIndex --;
+  if(songIndex < 0){
+    songIndex = songs.length-1;
+  }
+  loadSong(songs[songIndex]);
+  playSong();
+}
+
+// next song
+function nextSong(){
+  songIndex ++;
+  if(songIndex > songs.length-1){
+    songIndex = 0;
+  }
+  loadSong(songs[songIndex]);
+  playSong();
+}
+
+// onload select first song
+loadSong(songs[songIndex]);
+
+// event listners
+prevBtn.addEventListener('click', prevSong);
+nextBtn.addEventListener('click', nextSong);
