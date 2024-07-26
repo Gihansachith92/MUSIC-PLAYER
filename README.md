@@ -15,4 +15,6 @@ Welcome to the **Music Player** project! This is a simple and intuitive music pl
 - 🎨 **CSS3**: For styling the application.
 - 💻 **JavaScript**: For adding interactivity and functionality.
 
-## Page Link - https://gihansachith92.github.io/MUSIC-PLAYER/
+### Page Link - https://gihansachith92.github.io/MUSIC-PLAYER/
+![image](https://github.com/user-attachments/assets/efe3cb64-c7fb-48ca-aec2-40b8fbd54e51)
+
