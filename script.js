@@ -100,7 +100,7 @@ function updateProgressBar(e){
     progress.style.width = `${progressPercent}%`;
     // calculate display for duration
     const durationMinutes = Math.floor(duration/60);
-    const durationSeconds = Math.floor(duration % 60);
+    let durationSeconds = Math.floor(duration % 60);
     if(durationSeconds < 10){
       durationSeconds = `0${durationSeconds}`;
     }
@@ -108,6 +108,17 @@ function updateProgressBar(e){
     if(durationSeconds){
       durationEl.textContent = `${durationMinutes}:${durationSeconds}`;
     }
+
+     // calculate display for current
+     const currentMinutes = Math.floor(currentTime/60);
+     let currentSeconds = Math.floor(currentTime % 60);
+     if(currentSeconds < 10){
+       currentSeconds = `0${currentSeconds}`;
+     }
+     
+     currentTimeEl.textContent = `${currentMinutes}:${currentSeconds}`;
+     
+
   }
 }
 
